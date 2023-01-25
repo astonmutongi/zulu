@@ -1,0 +1,94 @@
+<footer class="footer">    
+
+    <mat-toolbar class="toolbarNav footer" color="primary" *ngIf="isLoggedIn" >   
+        <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <button mat-button class="mat-button" [routerLink]="['../home']">
+              <div class="toolbar-icon">
+                  <mat-icon>home</mat-icon>
+                </div>
+                <div class="toolbar-icon-text">
+                  <span>home</span>
+                </div>
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../dashboard']">
+                <div class="toolbar-icon">
+                    <mat-icon>ondemand_video</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>My Videos</span>
+                  </div>
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../previews']">
+                <div class="toolbar-icon">
+                    <mat-icon>movie</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>previews</span>
+                  </div>
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../vip']">
+                <div class="toolbar-icon">
+                    <mat-icon>video_library</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>videos</span>
+                  </div>
+            </button>
+            <button mat-button class="mat-button" (click)="onLogout()">
+                <div class="toolbar-icon">
+                    <mat-icon>logout</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>logout</span>
+                  </div>
+            </button>           
+        </div> 
+      </mat-toolbar>
+     
+      <mat-toolbar class="footer toolbarNav" color="primary" *ngIf="!isLoggedIn">  
+        <div fxFlex fxLayout="row" fxLayoutAlign="center">  
+            <button mat-button class="mat-button" [routerLink]="['../home']">
+                <div class="toolbar-icon">
+                    <mat-icon>home</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>home</span>
+                  </div>
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../bio']">
+                <div class="toolbar-icon">
+                    <mat-icon>info</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>bio</span>
+                  </div>
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../previews']">
+                <div class="toolbar-icon">
+                    <mat-icon>movie</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>previews</span>
+                  </div>
+           
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../vip']" >
+                <div class="toolbar-icon">
+                    <mat-icon>video_library</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>videos</span>
+                  </div>
+            </button>
+            <button mat-button class="mat-button" [routerLink]="['../login']" >
+                <div class="toolbar-icon">
+                    <mat-icon>login</mat-icon>
+                  </div>
+                  <div class="toolbar-icon-text">
+                    <span>login</span>
+                  </div>
+            </button>
+        </div>
+      </mat-toolbar>
+  </footer>
+  

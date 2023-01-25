@@ -1,0 +1,362 @@
+/*
+Theme Name: Betheme Child
+Theme URI: https://themes.muffingroup.com/betheme
+Author: Muffin group
+Author URI: https://muffingroup.com
+Description: Child Theme for Betheme
+Template: betheme
+Version: 1.6.2
+*/
+body { background-image: url("/wp-content/uploads/2019/07/kendra-bg1.jpg"); background-repeat: repeat-x; background-position:center top;}
+body{background-color:transparent!important;}
+
+#Action_bar {display:none;}
+
+@media screen and (max-width: 769px) {
+body:not(.template-slider):not(.header-simple) #Header {min-height: 140px!important;}
+#Top_bar a.responsive-menu-toggle {top: 65px;}
+#Top_bar a.responsive-menu-toggle {right: 30px;}
+#Top_bar a.responsive-menu-toggle i {font-size: 25px;line-height: 34px;}
+	#Top_bar #logo, .header-fixed #Top_bar #logo, .header-plain #Top_bar #logo, .header-transparent #Top_bar #logo {height: 170px;line-height: 0px;padding: 0px 0;}
+}
+
+
+body:not(.template-slider):not(.header-simple) #Header {min-height: 250px;}
+
+
+.column, .columns {
+    float: left;
+    margin: 0 1% 0px;
+}
+
+#Side_slide #menu ul li a {
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+
+
+#Top_bar .menu > li > a span:not(.description) {line-height: 40px; padding: 0 10px; border-right-width: 0px;}
+
+a.button, a.tp-button, button, input[type="submit"], input[type="reset"], input[type="button"] {border-radius: 100px;}
+a.action_button {border-radius: 100px;}
+a.button.button_size_3, a.tp-button.button_size_3, button.button_size_3, input[type="submit"].button_size_3, input[type="reset"].button_size_3, input[type="button"].button_size_3 {font-size: 130%;}
+a.button.button_size_3 .button_label {padding: 20px 30px;}
+
+.fancy_heading .title {font-size: 38px;line-height: 42px;}
+.fancy_heading_line .title {color: #DC81B5;}
+.fancy_heading .inside {color:#777777;}
+
+.single-photo-wrapper.image {display: none !important;}
+
+small, .small {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+smaller, .smaller {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-bottom: 5px!important;}
+
+smallgray, .smallgray {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 0 0 10px!important;
+	color:#eeeeee;
+}
+
+smallest, .smallest {
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 400;
+    margin: 0 0 5px!important;
+}
+
+disco, .disco {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 200;
+    margin: 0 0 10px!important;
+}
+
+.container-fluid{
+  max-width:1200px;
+}
+#fc-register-form{
+  width:100%;
+}
+#fc-register-form input[type=text],
+#fc-register-form input[type=password]{
+  width:100%;
+}
+.fc-form-container{
+  width:100%;
+}
+.fc-subscription-card{
+  background-color:#ebb7d5;
+  padding:10px;
+  margin-bottom:20px;
+  width:100%;
+  display: block;
+}
+.fc-form-error{
+  color:red;
+  font-style: italic;
+  margin: 5px 0;
+}
+.card-button input[type="radio"] {
+  position: absolute;
+  top:-3px;
+  left:0;
+  height:100%;
+  width:100%;
+  display: none;
+}
+.card-button{
+  display: inline-block;
+  position: relative;
+  margin-top:5px;
+  margin-right:10px;
+  vertical-align: top;
+  z-index:10;
+}
+
+.custom-radio{
+
+  background-size: contain;
+  cursor: pointer;
+  width:25px;
+  height:25px;
+}
+.card-button input[type="radio"]:checked ~ .custom-radio{
+
+    background-size: contain;
+}
+
+.card-desc{
+  display: inline-block;
+  vertical-align: top;
+  width:85%;
+}
+.card-desc label{
+  margin-top:0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.fc-image-container{
+  width:100%;
+  height:0;
+  padding:0;
+  padding-bottom:100%;
+  overflow:hidden;
+
+}
+.fc-image-container img{
+  width:100%;
+  border: 8px solid #efc7de;
+}
+.fc-title-margin{
+  margin-top:10px !important;
+  margin-bottom:35px;
+}
+.fc-video-type-bar{
+  width:100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top:15px;
+}
+.fc-title-margin a{
+  color:inherit;
+}
+.fc-title-margin a:hover{
+  text-decoration: none;
+}
+.fc-video-post-section > .mcb-section-inner{
+	padding-bottom:50px; 
+	padding-top:40px; 
+	border-bottom:2px dashed #efc7de;
+}
+
+.fc-video-post-section .image-even{
+  display:none;
+}
+.fc-pagination{
+  text-align: center;
+  font-size:1.2rem;
+}
+.fc-page-number{
+  color:white;
+  background-color:#dc81b5;
+  display: inline-block;
+  margin-right:2px;
+  padding:3px 8px;
+  transition: 0.3s;
+  margin-bottom:2px;
+}
+.fc-page-number a{
+  color:white;
+}
+.fc-pagination .current .fc-page-number{
+  background-color:#C93D8D;
+}
+
+.fc-page-number:hover {
+  background-color: #C93D8D;
+  color: white;
+}
+@media(min-width:768px){
+  .fc-video-post-section:nth-child(odd) .image-even{
+    display:none;
+  }
+
+  .fc-video-post-section:nth-child(even) .image-odd{
+    display: none;
+  }
+  .fc-video-post-section:nth-child(even) .image-even{
+    display: block;
+  }
+  .fc-image-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.menu-item .description{
+  display: none!important;
+}
+.fc-video-container{
+  width:100%;
+}
+.fc-video-container video{
+  width:100%;
+}
+
+.fc-video-card{
+  width:100%;
+  padding:10px;
+  background-color:#ebb7d5;
+  margin-bottom:10px;
+}
+.fc-video-card .fc-image-container{
+  display: inline-block;
+  width:20%;
+  max-width: 120px;
+  min-width: 120px;
+  height:auto;
+  margin-right: 10px;
+  transform:none;
+  top:0;
+  vertical-align: top;
+  padding:0;
+
+}
+.fc-video-card .fc-video-card-description{
+  display: inline-block;
+  vertical-align: top;
+}
+.fc-video-card a{
+  color:inherit;
+}
+.fc-video-card .button{
+  padding:0;
+}
+.user-login input[type=text],.user-login input[type=password]{
+  width:100%!important;
+}
+
+.tml .tml-label {font-size: 17px;}
+.tml-links {font-size: 15px;}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title {font-size: 1.1em;}
+.woocommerce ul.products li.product .desc {background: #F9F2F2;}
+.woocommerce .product div.entry-summary h1.product_title {font-size: 26px; line-height: 30px;margin-top: 20px;color:#C93D8D;}
+.woocommerce .product div.entry-summary > p.price {margin-bottom: 10px;}
+.woocommerce-product-details__short-description {font-size:18px!important;}
+
+.widget-area {padding: 30px 10px 20px;}
+.widget_product_categories ul {font-size: 20px;}
+.widget_product_categories ul li ul {font-size: 15px;}
+.woocommerce .widget_shopping_cart ul.product_list_widget li h6 {font-size: 18px;line-height: 20px;}
+.woocommerce .widget_shopping_cart ul.product_list_widget li .quantity {font-size: 16px;}
+
+.zoom_box .desc .desc_img img {max-width: 40% !important;}
+label {font-size:16px;}
+
+.upsell-button{
+	text-align:center !important;
+	width:290px;margin:0 auto !important;
+	display:block !important;
+	font-size:20px !important;
+	margin-bottom:25px;
+	background-color:#C93D8D!important;
+	margin-bottom:40px;
+}
+.upsell-button .button_label{
+	float:none !important;
+	
+}
+
+.pink-card{
+	padding:10px;
+	background-color:rgba(235,183,213,0.65);
+	width:100%;
+	margin-bottom:20px;
+}
+.pink-card a{
+	color:white !important;
+	display: block;
+	width:100%;
+	background-color:#C93D8D!important;
+}
+.pink-card .img-container{
+	width:100%;
+	overflow:hidden;
+	height:0;
+	padding-bottom:46.8%;
+	margin-bottom:10px;
+}
+.pink-card .img-container a{
+	padding:0;
+}
+.pink-card .img-container img{
+	width:100%;
+	transition: transform .2s;
+}
+.pink-card .img-container img:hover{
+	transform: scale(1.1);
+}
+.pink-card button{
+
+	width:100%;
+	margin-bottom:0;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.04);
+    color: #dc81b5;
+}
+
+@media(max-width:767px){
+	.mobile-tr-header #Top_bar{
+		top:10px !important;
+	}
+}
+.variations td{
+	width:50%!important;
+}
+@media(max-width:450px){
+	.variations td{
+		width:100%!important;
+		display:block;
+	}
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {display: none;}
+
+.woocommerce div.product .images, .woocommerce-page div.product .images {
+pointer-events: none !important;
+}

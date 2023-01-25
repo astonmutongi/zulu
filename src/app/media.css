@@ -1,0 +1,3 @@
+@media screen and (max-width: 769px) {
+    body:not(.template-slider):not(.header-simple) #Header {min-height: 0px!important;}
+    }

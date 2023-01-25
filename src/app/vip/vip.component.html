@@ -1,0 +1,18 @@
+<mat-progress-spinner *ngIf="loading" mode="indeterminate" color="accent"></mat-progress-spinner>
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-4 col-sm-12" *ngFor="let post of DataResponse">
+            <img class="card-img-top" height="300vh"  [src]="createImgPath(post.coverImage)" [alt]="post.title" />
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5> 
+                <p class="card-text">
+                Uploaded on
+                {{ post.createdate | date: "medium" }}
+                </p>
+                <p class="card-text">{{ post.description }}</p>     
+                <a *ngIf="IsLoggedIn" [routerLink]="['../payment']" [state]="{ listingId:post.listingId, price:post.price }"  class="btn btn-danger pull-right" >Download</a> 
+                <a *ngIf="!IsLoggedIn" routerLink='../register' [state]="{ listingId:post.listingId, price:post.price }"  class="btn btn-danger pull-right" >Download</a>              
+            </div>
+            </div>
+        </div>
+    </div>

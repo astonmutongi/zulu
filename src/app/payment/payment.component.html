@@ -1,0 +1,95 @@
+<mat-progress-spinner *ngIf="loading" mode="indeterminate" color="accent"></mat-progress-spinner>
+ <div class="container">
+ <div class="row">
+ <!--Click here to pay with airtime <input type="checkbox" id="isMobileCheckBox"  (change)="onChange()"><br /><br /> -->
+ 
+
+</div>
+</div>
+<div class="container" *ngIf="isMobilePay && !loading">
+    <div class="row">
+
+        <h2>Mobile payment</h2>
+        
+           <p>Sms Zulu-Barbll {{ref}} to 33903 </p>
+           <p>SMS charged at R1.50. No free minutes apply.</p> 
+       
+    </div>
+</div>
+
+<div class="container" *ngIf="!isMobilePay && !loading">
+    <div class="row">
+
+        <h2>Payment Form</h2>
+        <form  action="https://www.payfast.co.za/eng/process" method="post">
+        <div *ngIf="isTip">
+          Tip Amount in ZAR <input type="text" [(ngModel)]="price"  name="tipText" id="tipText" />
+        </div>
+            
+            <p>You will be making payment of R{{price}} through payfast for your purchase </p>
+            <br/>
+           
+            <a href= "https://www.payfast.co.za/eng/process?cmd=_paynow&amp;receiver=18544291&amp;item_name={{ref}}&amp;item_description=test&amp;amount={{price}}&amp;return_url=http%3A%2F%2Fwww.zulubarb.com%2Fdashboard&amp;cancel_url=http%3A%2F%2Fwww.zulubarb.com%2FPaymentError&amp;notify_url=https%3A%2F%2Fmutongi.co.za%2FSubscription%2Fsubscribe"><img src="https://www.payfast.co.za/images/buttons/light-small-paynow.png" width="165" height="36" alt="Pay" title="Pay Now with PayFast" /></a>
+
+           
+                
+          <!--  <div class="form-group"> 
+                <input type="hidden" name="merchant_id" value="...." />
+                <input type="hidden" name="merchant_key" value="....." />
+                <input type="hidden" name="return_url" value="http://zulubarb.com/return" />
+                <input type="hidden" name="cancel_url" value="http://zulubarb.com/return" />
+                <input type="hidden" name="notify_url" value="https://yourApplication/paymentscreen" />
+                <input type="hidden" name="name_first" value={name} />
+                <input type="hidden" name="email_address" value={email} />
+                <input type="hidden" name="m_payment_id" value={{ref}} />
+                <input type="hidden" name="amount" value={amount} />
+                <input type="hidden" name="item_name" value={payment_name} />
+                <input type="hidden" name="item_description" value={description_if_any} />
+                <input type="hidden" name="custom_int1" value={custome_integer_value_if_any} />
+                <input type="hidden" name="custom_str1" value={custome_string_value_if_any} />
+                <input type="hidden" name="custom_str2" value={custome_string_value_if_any} />
+                <input type="hidden" name="passphrase" value="passphrase" />
+                <input type="hidden" name="signature" value={MD5Signature} />
+                <div className="row" style='display: flex; justify-content: center; align-items: center'>
+                   <input type="image" src="https://www.payfast.co.za/images/buttons/light-small-paynow.png" width="165" height="36" alt="Pay Now" title="Pay Now with PayFast">                
+                </div>                
+            </div> -->
+        </form>
+    </div>
+</div>
+<div fxHide fxShow.gt-sm> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> </div>
+
+
+
+<!--
+
+
+<form action="https://www.payfast.co.za/eng/process" method="POST">
+          <input type="hidden" name="merchant_id" value="...." />
+          <input type="hidden" name="merchant_key" value="....." />
+          <input type="hidden" name="return_url" value="https://yourApplication/paymentscreen" />
+          <input type="hidden" name="cancel_url" value="https://yourApplication/paymentscreen" />
+          <input type="hidden" name="notify_url" value="https://yourApplication/paymentscreen" />
+          <input type="hidden" name="name_first" value={name} />
+          <input type="hidden" name="email_address" value={email} />
+          <input type="hidden" name="m_payment_id" value={unique_id_for_user} />
+          <input type="hidden" name="amount" value={amount} />
+          <input type="hidden" name="item_name" value={payment_name} />
+          <input type="hidden" name="item_description" value={description_if_any} />
+          <input type="hidden" name="custom_int1" value={custome_integer_value_if_any} />
+          <input type="hidden" name="custom_str1" value={custome_string_value_if_any} />
+          <input type="hidden" name="custom_str2" value={custome_string_value_if_any} />
+          <input type="hidden" name="passphrase" value="passphrase" />
+          <input type="hidden" name="signature" value={MD5Signature} />
+          <div className="row" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div className="col-lg-6">
+              <img alt="payfast" src="../public/upload/payfastpaynow.png" vspace="3" width="100%" height="100%" />
+            </div>
+            <div className="col-lg-6">
+                <input style={{marginRight: 20, float: 'right'}} name="disable" type="submit" disabled={isEnablePayment} width="100%" height="100%" alt="Submit" align="bottom" value="Purchase" />
+            </div>
+          </div>
+        </form>
+
+
+-->
