@@ -12,6 +12,10 @@ import { PaymentComponent } from './payment/payment.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { AuthGuard } from './_helpers/auth.guard';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
+import { SupportComponent } from './support/support.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 const routes: Routes = [
   { path: 'bio', component: BioComponent },
@@ -24,12 +28,12 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'payment', component: PaymentComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'terms', component: TermsComponent },
+  { path: 'support', component: SupportComponent },
   { path: 'passwordreset', component: PasswordResetComponent },
+  { path: 'disclaimer', component: DisclaimerComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] } 
-
-
-
-
 ];
 
 @NgModule({

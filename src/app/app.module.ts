@@ -32,7 +32,11 @@ import { PaymentErrorComponent } from './payment-error/payment-error.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SAVER, getSaver } from './saver.provider';
-import { PasswordResetComponent } from './password-reset/password-reset.component'
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { SupportComponent } from './support/support.component';
+import { TermsComponent } from './terms/terms.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component'
 
 
 @NgModule({
@@ -52,7 +56,11 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
     LandingPageComponent,
     ConfirmComponent,
     PaymentErrorComponent,
-    PasswordResetComponent
+    PasswordResetComponent,
+    PrivacyComponent,
+    SupportComponent,
+    TermsComponent,
+    DisclaimerComponent
   ],
   imports: [
     BrowserModule,
